@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-          
+            MainScreen screen = new MainScreen();
+            screen.Screen();
         }
     }
 }
