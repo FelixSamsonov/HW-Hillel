@@ -44,7 +44,7 @@ class MainScreen
             if (decimal.TryParse(inputSecondNumber, out decimal secondNumber))
             {
                 CalculationData c = new CalculationData(firstNumber, inputOperation, secondNumber);
-                c.Count();
+                c.Calculate();
             }
             else
                 throw new ArgumentException("Error: second value not a number!");
