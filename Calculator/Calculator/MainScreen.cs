@@ -8,7 +8,7 @@ namespace CalculatorApp;
 
 class MainScreen
 {
-    public void Screen()
+    public void ShowScreen()
     {
         Console.WriteLine("Welcome to the Calculator");
         Console.WriteLine("Enter your equation, and I'll calculate it for you!");
