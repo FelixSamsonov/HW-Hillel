@@ -47,10 +47,10 @@ class MainScreen
                 c.Calculate();
             }
             else
-                throw new ArgumentException("Error: second value not a number!");
+                Console.WriteLine("Error: second value not a number!");
         }
         else
-            throw new ArgumentException("Error: first value not a number!");
+            Console.WriteLine("Error: first value not a number!");
 
     }
 }
