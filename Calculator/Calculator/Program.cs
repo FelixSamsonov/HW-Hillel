@@ -1,11 +1,10 @@
-﻿namespace Calculator
+﻿namespace CalculatorApp;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            MainScreen screen = new MainScreen();
-            screen.Screen();
-        }
+        MainScreen screen = new MainScreen();
+        screen.Screen();
     }
 }

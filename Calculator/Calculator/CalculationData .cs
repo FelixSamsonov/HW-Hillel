@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator;
+namespace CalculatorApp;
 
 public class CalculationData
 {
@@ -31,7 +31,7 @@ public class CalculationData
         }
     }
 
-    public void Count()
+    public void Calculate()
     {
         switch (operation)
         {
