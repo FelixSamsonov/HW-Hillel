@@ -25,9 +25,7 @@ public class CalculationData
         set
         {
             if (value == '+' || value == '-' || value == '*' || value == '/')
-            {
                 operation = value;
-            }
             else
                 throw new ArgumentException("You used incorect operation");
         }
