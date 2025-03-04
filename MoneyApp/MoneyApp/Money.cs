@@ -13,8 +13,8 @@ class Money
 
     public Money(int amountWhole, byte amountCents)
     {
-        this.amountWhole = amountWhole;
-        this.amountCents = amountCents;
+        AmountWhole = amountWhole;
+        AmountCents = amountCents;
     }
 
     public int AmountWhole
@@ -33,10 +33,15 @@ class Money
         get { return amountCents; }
         set
         {
-            if (value >= 0 && value < 101)
-                amountCents = value;
+          
+            if (value >=0 )
+            {
+                amountWhole += value / 100;
+                amountCents = (byte)(value % 100);
+            }
+
             else
-                throw new Exception("Cents cannot be less than 0 or more than 100");
+                throw new Exception("Cents cannot be less than 0");
         }
     }
      public void ShowAmount()

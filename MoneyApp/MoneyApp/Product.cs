@@ -7,16 +7,18 @@ using System.Threading.Tasks.Dataflow;
 
 namespace MoneyApp;
 
-class Product : Money
+class Product
 {
     public string? Name { get; set; }
+    public Money Price { get; set; }
     private decimal promotion;
     
      
-    public Product(string? name, int amountWhole, byte amountCents, decimal promotion) : base(amountWhole, amountCents)
+    public Product(string? name, Money price, decimal promotion)
     {
         Name = name;
-        Promotion = promotion;
+        Price = price;
+        this.Promotion = promotion;
         
     }
     public decimal Promotion
@@ -32,7 +34,7 @@ class Product : Money
     }
     public void PriceWithPromotion()
     {
-        decimal price = AmountWhole + AmountCents / 100m;
+        decimal price = Price.AmountWhole + Price.AmountCents / 100m;
         decimal priceWithPromotion = price * (1 - promotion);
         Console.WriteLine($"Price with promotion: {priceWithPromotion:F2} dollars");
     }
