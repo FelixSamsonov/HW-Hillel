@@ -41,6 +41,6 @@ class Money
     }
      public void ShowAmount()
     {
-        Console.WriteLine($"Your price: {AmountWhole},{AmountCents} dollars");
+        Console.WriteLine($"Your price: {AmountWhole} dollars {AmountCents} cents");
     }
 }
